@@ -22,7 +22,6 @@ export default class RestartTo extends Extension {
     }
 
     async restartTo(id) {
-        console.error(id);
         const proc = Gio.Subprocess.new(
             ['/usr/bin/pkexec', 'efibootmgr', '--bootnext', id],
             Gio.SubprocessFlags.NONE
@@ -58,7 +57,7 @@ export default class RestartTo extends Extension {
 
     enable() {
         if (!Main.panel.statusArea.quickSettings._system) {
-            GLib.idle_add(GLib.PRIORITY_DEFAULT, () => {
+            this.sourceId = GLib.idle_add(GLib.PRIORITY_DEFAULT, () => {
                 if (!Main.panel.statusArea.quickSettings._system)
                     return GLib.SOURCE_CONTINUE;
                 this.addMenuItem();
@@ -72,5 +71,9 @@ export default class RestartTo extends Extension {
     disable() {
         this.menuItem.destroy();
         this.menuItem = null;
+        if (this.sourceId) {
+            GLib.Source.remove(this.sourceId);
+            this.sourceId = null;
+        }
     }
 }
