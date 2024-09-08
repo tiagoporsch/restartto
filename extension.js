@@ -23,7 +23,7 @@ export default class RestartTo extends Extension {
 
     async restartTo(id) {
         const proc = Gio.Subprocess.new(
-            ['/usr/bin/pkexec', 'efibootmgr', '--bootnext', id],
+            ['/usr/bin/env', 'pkexec', 'efibootmgr', '--bootnext', id],
             Gio.SubprocessFlags.NONE
         );
         await proc.wait_async(null);
@@ -36,7 +36,7 @@ export default class RestartTo extends Extension {
         } catch (e) {
             console.warn(e);
             const proc = Gio.Subprocess.new(
-                ['/usr/bin/pkexec', 'efibootmgr', '--delete-bootnext'],
+                ['/usr/bin/env', 'pkexec', 'efibootmgr', '--delete-bootnext'],
                 Gio.SubprocessFlags.NONE
             );
             await proc.wait_async(null);
