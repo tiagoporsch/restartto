@@ -18,7 +18,7 @@ export default class RestartTo extends Extension {
         if (!proc.get_successful()) {
             throw new Error("Failed to get boot entries");
         }
-        return {...[...stdout.matchAll(/Boot([0-9]{4})\* ([^\t]*)/g)].map(m => (m[1], m[2]))};
+        return new Map([...stdout.matchAll(/Boot([0-9]{4})\* ([^\t]*)/g)].map(m => [m[1], m[2]]));
     }
 
     async restartTo(id) {
@@ -46,7 +46,7 @@ export default class RestartTo extends Extension {
     addMenuItem() {
         this.menuItem = new PopupMenu.PopupSubMenuMenuItem('Restart To...', false);
         this.getBootEntries().then((bootEntries) => {
-            for (const [id, name] of Object.entries(bootEntries)) {
+            for (const [id, name] of bootEntries.entries()) {
                 this.menuItem.menu.addAction(name, () => {
                     this.restartTo(id);
                 });
