@@ -3,7 +3,7 @@ import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 import GLib from 'gi://GLib';
 import Gio from 'gi://Gio';
-import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
+import {Extension, gettext} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 Gio._promisify(Gio.Subprocess.prototype, 'communicate_utf8_async');
 Gio._promisify(Gio.Subprocess.prototype, 'wait_async');
@@ -16,7 +16,7 @@ export default class RestartTo extends Extension {
         );
         const [stdout, stderr] = await proc.communicate_utf8_async(null, null);
         if (!proc.get_successful()) {
-            throw new Error("Failed to get boot entries");
+            throw new Error('Failed to get boot entries');
         }
         return new Map([...stdout.matchAll(/Boot([0-9]{4})\* ([^\t]*)/g)].map(m => [m[1], m[2]]));
     }
@@ -28,7 +28,7 @@ export default class RestartTo extends Extension {
         );
         await proc.wait_async(null);
         if (!proc.get_successful()) {
-            throw new Error("Failed to set BootNext");
+            throw new Error('Failed to set BootNext');
         }
 
         try {
@@ -44,7 +44,7 @@ export default class RestartTo extends Extension {
     }
 
     addMenuItem() {
-        this.menuItem = new PopupMenu.PopupSubMenuMenuItem('Restart To...', false);
+        this.menuItem = new PopupMenu.PopupSubMenuMenuItem(gettext('Restart To...'), false);
         this.getBootEntries().then((bootEntries) => {
             for (const [id, name] of bootEntries.entries()) {
                 this.menuItem.menu.addAction(name, () => {
