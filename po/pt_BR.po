@@ -17,6 +17,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: extension.js:47
-msgid "Restart To..."
-msgstr "Reiniciar para..."
+msgid "Restart To ..."
+msgstr "Reiniciar para ..."
 
