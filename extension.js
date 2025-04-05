@@ -5,22 +5,12 @@ import GLib from 'gi://GLib';
 import Gio from 'gi://Gio';
 import {Extension, gettext} from 'resource:///org/gnome/shell/extensions/extension.js';
 
+import {getBootEntries} from './efi.js';
+
 Gio._promisify(Gio.Subprocess.prototype, 'communicate_utf8_async');
 Gio._promisify(Gio.Subprocess.prototype, 'wait_async');
 
 export default class RestartTo extends Extension {
-    async getBootEntries() {
-        const proc = Gio.Subprocess.new(
-            ['efibootmgr'],
-            Gio.SubprocessFlags.STDOUT_PIPE | Gio.SubprocessFlags.STDERR_PIPE
-        );
-        const [stdout, stderr] = await proc.communicate_utf8_async(null, null);
-        if (!proc.get_successful()) {
-            throw new Error('Failed to get boot entries');
-        }
-        return new Map([...stdout.matchAll(/Boot([0-9]{4})\* ([^\t]*)/g)].map(m => [m[1], m[2]]));
-    }
-
     async restartTo(id) {
         const proc = Gio.Subprocess.new(
             ['/usr/bin/env', 'pkexec', 'efibootmgr', '--bootnext', id],
@@ -43,15 +33,25 @@ export default class RestartTo extends Extension {
         }
     }
 
-    addMenuItem() {
-        this.menuItem = new PopupMenu.PopupSubMenuMenuItem(gettext('Restart To...'), false);
-        this.getBootEntries().then((bootEntries) => {
+    updateMenuEntries() {
+        if (this.menuItem == null)
+            return;
+        const blacklist = this.settings.get_strv('blacklist');
+        this.menuItem.menu.removeAll();
+        getBootEntries().then((bootEntries) => {
             for (const [id, name] of bootEntries.entries()) {
-                this.menuItem.menu.addAction(name, () => {
-                    this.restartTo(id);
-                });
+                if (!blacklist.includes(name)) {
+                    this.menuItem.menu.addAction(name, () => {
+                        this.restartTo(id);
+                    });
+                }
             }
         });
+    }
+
+    addMenuItem() {
+        this.menuItem = new PopupMenu.PopupSubMenuMenuItem(gettext('Restart To...'), false);
+        this.updateMenuEntries();
         Main.panel.statusArea.quickSettings._system?.quickSettingsItems[0].menu.addMenuItem(this.menuItem, 2);
     }
 
@@ -66,6 +66,11 @@ export default class RestartTo extends Extension {
         } else {
             this.addMenuItem();
         }
+
+        this.settings = this.getSettings('org.gnome.shell.extensions.restartto');
+        this.settings.connect('changed::blacklist', (settings, key) => {
+            this.updateMenuEntries()
+        });
     }
 
     disable() {

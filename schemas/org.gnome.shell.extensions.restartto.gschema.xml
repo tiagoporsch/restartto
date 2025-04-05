@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.restartto" path="/org/gnome/shell/extensions/restartto/">
+    <key name="blacklist" type="as">
+      <default>[]</default>
+      <summary>Blacklist</summary>
+      <description>Which entries to hide from the `Restart to...` menu</description>
+    </key>
+  </schema>
+</schemalist>
