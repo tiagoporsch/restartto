@@ -38,6 +38,17 @@ export default class RestartTo extends Extension {
             return;
         const blacklist = this.settings.get_strv('blacklist');
         this.menuItem.menu.removeAll();
+        if (!blacklist.includes('UEFI')) {
+            this.menuItem.menu.addAction('UEFI', async () => {
+                this.proxy.SetRebootToFirmwareSetupRemote(true);
+                try {
+                    await new GnomeSession.SessionManager().RebootAsync();
+                } catch (e) {
+                    console.warn(e);
+                    this.proxy?.SetRebootToFirmwareSetupRemote(false);
+                }
+            });
+        }
         getBootEntries().then((bootEntries) => {
             for (const [id, name] of bootEntries.entries()) {
                 if (!blacklist.includes(name)) {
@@ -56,6 +67,18 @@ export default class RestartTo extends Extension {
     }
 
     enable() {
+        this.proxy = Gio.DBusProxy.makeProxyWrapper(`<node>
+          <interface name="org.freedesktop.login1.Manager">
+            <method name="SetRebootToFirmwareSetup">
+              <arg type="b" direction="in"/>
+            </method>
+          </interface>
+        </node>`)(
+            Gio.DBus.system,
+            'org.freedesktop.login1',
+            '/org/freedesktop/login1',
+        );
+
         if (!Main.panel.statusArea.quickSettings._system) {
             this.sourceId = GLib.idle_add(GLib.PRIORITY_DEFAULT, () => {
                 if (!Main.panel.statusArea.quickSettings._system)
@@ -74,6 +97,7 @@ export default class RestartTo extends Extension {
     }
 
     disable() {
+        this.proxy = null;
         this.menuItem.destroy();
         this.menuItem = null;
         if (this.sourceId) {
