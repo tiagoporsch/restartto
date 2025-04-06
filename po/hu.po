@@ -1,14 +1,14 @@
 # Hungarian translation for restartto.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the restartto@tiagoporsch.github.io package.
-# ViBE <vibe@protonmail.com>, 2024.
+# ViBE <vibe@protonmail.com>, 2024-2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: restartto@tiagoporsch.github.io\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-24 14:00-0300\n"
-"PO-Revision-Date: 2024-09-24 19:30+0200\n"
+"POT-Creation-Date: 2025-04-06 10:16-0300\n"
+"PO-Revision-Date: 2025-04-06 15:57+0200\n"
 "Last-Translator: ViBE <vibe@protonmail.com>\n"
 "Language-Team: Hungarian <vibe@protonmail.com>\n"
 "Language: hu\n"
@@ -17,6 +17,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: extension.js:47
+#: extension.js:64
 msgid "Restart To..."
 msgstr "Újraindítás..."
+
+#: prefs.js:13
+msgid "General"
+msgstr "Általános"
+
+#: prefs.js:19
+msgid "Blacklist"
+msgstr "Feketelista"
+
+#: prefs.js:20
+msgid "Hide boot entries"
