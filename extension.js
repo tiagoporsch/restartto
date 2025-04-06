@@ -3,7 +3,7 @@ import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 import GLib from 'gi://GLib';
 import Gio from 'gi://Gio';
-import {Extension, gettext} from 'resource:///org/gnome/shell/extensions/extension.js';
+import {Extension, gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 import {getBootEntries} from './efi.js';
 
@@ -61,7 +61,7 @@ export default class RestartTo extends Extension {
     }
 
     addMenuItem() {
-        this.menuItem = new PopupMenu.PopupSubMenuMenuItem(gettext('Restart To...'), false);
+        this.menuItem = new PopupMenu.PopupSubMenuMenuItem(_('Restart To...'), false);
         this.updateMenuEntries();
         Main.panel.statusArea.quickSettings._system?.quickSettingsItems[0].menu.addMenuItem(this.menuItem, 2);
     }
