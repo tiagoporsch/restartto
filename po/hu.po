@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the restartto@tiagoporsch.github.io package.
 # ViBE <vibe@protonmail.com>, 2024-2025.
 #
+
 msgid ""
 msgstr ""
 "Project-Id-Version: restartto@tiagoporsch.github.io\n"
@@ -16,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 48.0\n"
 
 #: extension.js:64
 msgid "Restart To..."
@@ -31,3 +33,4 @@ msgstr "Feketelista"
 
 #: prefs.js:20
 msgid "Hide boot entries"
+msgstr "Elrejtendő rendszerindítási elemek kiválasztása"
