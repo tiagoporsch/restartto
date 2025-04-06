@@ -67,6 +67,8 @@ export default class RestartTo extends Extension {
     }
 
     enable() {
+        this.settings = this.getSettings();
+
         this.proxy = Gio.DBusProxy.makeProxyWrapper(`<node>
           <interface name="org.freedesktop.login1.Manager">
             <method name="SetRebootToFirmwareSetup">
@@ -90,7 +92,6 @@ export default class RestartTo extends Extension {
             this.addMenuItem();
         }
 
-        this.settings = this.getSettings('org.gnome.shell.extensions.restartto');
         this.settings.connect('changed::blacklist', (settings, key) => {
             this.updateMenuEntries()
         });
