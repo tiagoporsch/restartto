@@ -2,7 +2,7 @@
     "uuid": "restartto@tiagoporsch.github.io",
     "name": "Restart To",
     "description": "Adds a menu item to restart to any other EFI boot entry",
-    "shell-version": [ "45", "46", "47", "48" ],
+    "shell-version": [ "45", "46", "47", "48", "49" ],
     "url": "https://github.com/tiagoporsch/restartto",
     "gettext-domain": "restartto@tiagoporsch.github.io",
     "settings-schema": "org.gnome.shell.extensions.restartto"
