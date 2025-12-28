@@ -1,0 +1,34 @@
+# Russian translation for restartto.
+# Copyright (C) 2025
+# This file is distributed under the same license as the restartto@tiagoporsch.github.io package.
+# TechnoGuru123698741 <crasnolobovdanila@yandex.ru>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: restartto@tiagoporsch.github.io\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-06 10:16-0300\n"
+"PO-Revision-Date: 2025-12-28 13:09+0300\n"
+"Last-Translator: TechnoGuru123698741 <crasnolobovdanila@yandex.ru>\n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: extension.js:64
+msgid "Restart To..."
+msgstr "Перезапуск В..."
+
+#: prefs.js:13
+msgid "General"
+msgstr "Общее"
+
+#: prefs.js:19
+msgid "Blacklist"
+msgstr "Чёрный список"
+
+#: prefs.js:20
+msgid "Hide boot entries"
+msgstr "Скрыть загрузочные записи"
