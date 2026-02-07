@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: restartto@tiagoporsch.github.io\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-26 17:55-0300\n"
-"PO-Revision-Date: 2024-09-26 17:55-0300\n"
+"PO-Revision-Date: 2026-02-07 15:48-0300\n"
 "Last-Translator: Victor Borges <victor1882@outlook.com>\n"
 "Language-Team: Portuguese <victor1882@outlook.com>\n"
 "Language: pt\n"
@@ -16,6 +16,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: extension.js:47
+#: extension.js:64
 msgid "Restart To..."
 msgstr "Reiniciar para..."
+
+#: prefs.js:13
+msgid "General"
+msgstr "Geral"
+
+#: prefs.js:19
+msgid "Blacklist"
+msgstr "Lista negra"
+
+#: prefs.js:20
+msgid "Hide boot entries"
+msgstr "Ocultar entradas de arranque"
