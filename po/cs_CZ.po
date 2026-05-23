@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the restartto@tiagoporsch.github.io package.
 # Jiří Švácha <jiri@jirkasvacha.cz>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
@@ -18,18 +17,54 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.5\n"
 
-#: extension.js:64
+#: extension.js:94
 msgid "Restart To..."
 msgstr "Restartovat do..."
 
-#: prefs.js:13
+#: prefs.js:16
 msgid "General"
 msgstr "Obecné"
 
-#: prefs.js:19
-msgid "Blacklist"
-msgstr "Blacklist"
+#: prefs.js:22
+msgid "Select Boot Entries to display"
+msgstr "Vyberte položky spouštění k zobrazení"
 
-#: prefs.js:20
-msgid "Hide boot entries"
-msgstr "Skrýt položky v bootovací nabídce"
+#: prefs.js:23
+msgid "Toggle to Show/Hide. Drag to reorder. Click names to rename."
+msgstr "Kliknutím skryjete/zobrazíte. Tažením změníte pořadí. Kliknutím na název jej přejmenujete."
+
+#: prefs.js:29 prefs.js:37
+msgid "Keyboard Shortcuts"
+msgstr "Klávesové zkratky"
+
+#: prefs.js:38
+msgid ""
+"<b>J / K</b> : Move selected row down / up\n"
+"<b>Space / Enter</b> : Toggle visibility\n"
+"<b>R / E / F2</b> : Rename entry\n"
+"<b>Esc</b> : Cancel editing"
+msgstr ""
+"<b>J / K</b> : Posunout vybraný řádek dolů / nahoru\n"
+"<b>Mezerník / Enter</b> : Přepnout viditelnost\n"
+"<b>R / E / F2</b> : Přejmenovat položku\n"
+"<b>Esc</b> : Zrušit úpravy"
+
+#: prefs.js:48
+msgid "Understood"
+msgstr "Rozumím"
+
+#: prefs.js:182
+msgid "Click to rename"
+msgstr "Kliknutím přejmenujete"
+
+#: prefs.js:215
+msgid "Save"
+msgstr "Uložit"
+
+#: prefs.js:222
+msgid "Cancel"
+msgstr "Zrušit"
+
+#: prefs.js:235
+msgid "Revert to original name"
+msgstr "Vrátit na původní název"
