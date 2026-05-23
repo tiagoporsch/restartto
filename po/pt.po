@@ -16,18 +16,54 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: extension.js:64
+#: extension.js:94
 msgid "Restart To..."
 msgstr "Reiniciar para..."
 
-#: prefs.js:13
+#: prefs.js:16
 msgid "General"
 msgstr "Geral"
 
-#: prefs.js:19
-msgid "Blacklist"
-msgstr "Lista negra"
+#: prefs.js:22
+msgid "Select Boot Entries to display"
+msgstr "Selecionar entradas de arranque a apresentar"
 
-#: prefs.js:20
-msgid "Hide boot entries"
-msgstr "Ocultar entradas de arranque"
+#: prefs.js:23
+msgid "Toggle to Show/Hide. Drag to reorder. Click names to rename."
+msgstr "Clique para mostrar/ocultar. Arraste para reordenar. Clique nos nomes para mudar o nome."
+
+#: prefs.js:29 prefs.js:37
+msgid "Keyboard Shortcuts"
+msgstr "Atalhos de teclado"
+
+#: prefs.js:38
+msgid ""
+"<b>J / K</b> : Move selected row down / up\n"
+"<b>Space / Enter</b> : Toggle visibility\n"
+"<b>R / E / F2</b> : Rename entry\n"
+"<b>Esc</b> : Cancel editing"
+msgstr ""
+"<b>J / K</b> : Mover a linha selecionada para baixo / cima\n"
+"<b>Espaço / Enter</b> : Alternar visibilidade\n"
+"<b>R / E / F2</b> : Mudar o nome da entrada\n"
+"<b>Esc</b> : Cancelar edição"
+
+#: prefs.js:48
+msgid "Understood"
+msgstr "Entendido"
+
+#: prefs.js:182
+msgid "Click to rename"
+msgstr "Clique para mudar o nome"
+
+#: prefs.js:215
+msgid "Save"
+msgstr "Guardar"
+
+#: prefs.js:222
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: prefs.js:235
+msgid "Revert to original name"
+msgstr "Reverter para o nome original"
