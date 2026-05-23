@@ -17,18 +17,54 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: extension.js:64
+#: extension.js:94
 msgid "Restart To..."
 msgstr "Перезапустити до..."
 
-#: prefs.js:13
+#: prefs.js:16
 msgid "General"
 msgstr "Загальні"
 
-#: prefs.js:19
-msgid "Blacklist"
-msgstr "Список виключень"
+#: prefs.js:22
+msgid "Select Boot Entries to display"
+msgstr "Виберіть записи завантаження для відображення"
 
-#: prefs.js:20
-msgid "Hide boot entries"
-msgstr "Приховати записи завантаження"
+#: prefs.js:23
+msgid "Toggle to Show/Hide. Drag to reorder. Click names to rename."
+msgstr "Натисніть, щоб показати/приховати. Перетягніть для зміни порядку. Натисніть на назву для перейменування."
+
+#: prefs.js:29 prefs.js:37
+msgid "Keyboard Shortcuts"
+msgstr "Комбінації клавіш"
+
+#: prefs.js:38
+msgid ""
+"<b>J / K</b> : Move selected row down / up\n"
+"<b>Space / Enter</b> : Toggle visibility\n"
+"<b>R / E / F2</b> : Rename entry\n"
+"<b>Esc</b> : Cancel editing"
+msgstr ""
+"<b>J / K</b> : Перемістити вибраний рядок вниз / вгору\n"
+"<b>Пробіл / Enter</b> : Перемкнути видимість\n"
+"<b>R / E / F2</b> : Перейменувати запис\n"
+"<b>Esc</b> : Скасувати редагування"
+
+#: prefs.js:48
+msgid "Understood"
+msgstr "Зрозуміло"
+
+#: prefs.js:182
+msgid "Click to rename"
+msgstr "Натисніть для перейменування"
+
+#: prefs.js:215
+msgid "Save"
+msgstr "Зберегти"
+
+#: prefs.js:222
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: prefs.js:235
+msgid "Revert to original name"
+msgstr "Повернути початкову назву"
