@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the restartto@tiagoporsch.github.io package.
 # TechnoGuru123698741 <crasnolobovdanila@yandex.ru>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: restartto@tiagoporsch.github.io\n"
@@ -17,18 +16,54 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: extension.js:64
+#: extension.js:94
 msgid "Restart To..."
-msgstr "Перезапуск В..."
+msgstr "Перезапуск в..."
 
-#: prefs.js:13
+#: prefs.js:16
 msgid "General"
 msgstr "Общее"
 
-#: prefs.js:19
-msgid "Blacklist"
-msgstr "Чёрный список"
+#: prefs.js:22
+msgid "Select Boot Entries to display"
+msgstr "Выберите загрузочные записи для отображения"
 
-#: prefs.js:20
-msgid "Hide boot entries"
-msgstr "Скрыть загрузочные записи"
+#: prefs.js:23
+msgid "Toggle to Show/Hide. Drag to reorder. Click names to rename."
+msgstr "Нажмите, чтобы показать/скрыть. Перетащите для изменения порядка. Нажмите на имя для переименования."
+
+#: prefs.js:29 prefs.js:37
+msgid "Keyboard Shortcuts"
+msgstr "Сочетания клавиш"
+
+#: prefs.js:38
+msgid ""
+"<b>J / K</b> : Move selected row down / up\n"
+"<b>Space / Enter</b> : Toggle visibility\n"
+"<b>R / E / F2</b> : Rename entry\n"
+"<b>Esc</b> : Cancel editing"
+msgstr ""
+"<b>J / K</b> : Переместить выбранную строку вниз / вверх\n"
+"<b>Пробел / Enter</b> : Переключить видимость\n"
+"<b>R / E / F2</b> : Переименовать запись\n"
+"<b>Esc</b> : Отменить редактирование"
+
+#: prefs.js:48
+msgid "Understood"
+msgstr "Понятно"
+
+#: prefs.js:182
+msgid "Click to rename"
+msgstr "Нажмите для переименования"
+
+#: prefs.js:215
+msgid "Save"
+msgstr "Сохранить"
+
+#: prefs.js:222
+msgid "Cancel"
+msgstr "Отмена"
+
+#: prefs.js:235
+msgid "Revert to original name"
+msgstr "Вернуть исходное имя"

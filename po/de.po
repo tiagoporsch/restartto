@@ -17,6 +17,54 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.5\n"
 
-#: extension.js:47
+#: extension.js:94
 msgid "Restart To..."
 msgstr "Neustart zu ..."
+
+#: prefs.js:16
+msgid "General"
+msgstr "Allgemein"
+
+#: prefs.js:22
+msgid "Select Boot Entries to display"
+msgstr "Anzuzeigende Starteinträge auswählen"
+
+#: prefs.js:23
+msgid "Toggle to Show/Hide. Drag to reorder. Click names to rename."
+msgstr "Klicken zum Ein-/Ausblenden. Ziehen zum Neuordnen. Namen anklicken zum Umbenennen."
+
+#: prefs.js:29 prefs.js:37
+msgid "Keyboard Shortcuts"
+msgstr "Tastenkombinationen"
+
+#: prefs.js:38
+msgid ""
+"<b>J / K</b> : Move selected row down / up\n"
+"<b>Space / Enter</b> : Toggle visibility\n"
+"<b>R / E / F2</b> : Rename entry\n"
+"<b>Esc</b> : Cancel editing"
+msgstr ""
+"<b>J / K</b> : Ausgewählte Zeile nach unten / oben verschieben\n"
+"<b>Leertaste / Enter</b> : Sichtbarkeit umschalten\n"
+"<b>R / E / F2</b> : Eintrag umbenennen\n"
+"<b>Esc</b> : Bearbeitung abbrechen"
+
+#: prefs.js:48
+msgid "Understood"
+msgstr "Verstanden"
+
+#: prefs.js:182
+msgid "Click to rename"
+msgstr "Zum Umbenennen anklicken"
+
+#: prefs.js:215
+msgid "Save"
+msgstr "Speichern"
+
+#: prefs.js:222
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: prefs.js:235
+msgid "Revert to original name"
+msgstr "Auf ursprünglichen Namen zurücksetzen"

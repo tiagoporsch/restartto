@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
   <schema id="org.gnome.shell.extensions.restartto" path="/org/gnome/shell/extensions/restartto/">
+    
+    <key name="hidden-entries" type="as">
+      <default>[]</default>
+      <summary>Hidden Entries</summary>
+      <description>Which entries to hide from the `Restart to...` menu</description>
+    </key>
+    <key name="custom-names" type="s">
+      <default>'{}'</default>
+      <summary>Custom Names Mapping</summary>
+      <description>JSON string mapping boot entry IDs to customized display names</description>
+    </key>
+    <key name="order" type="as">
+      <default>[]</default>
+      <summary>Entries Order</summary>
+      <description>The custom order sequence of boot entry IDs</description>
+    </key>
+    
+    <!-- DEPRECATED KEY (Kept for migration) -->
     <key name="blacklist" type="as">
       <default>[]</default>
-      <summary>Blacklist</summary>
-      <description>Which entries to hide from the `Restart to...` menu</description>
+      <summary>DEPRECATED: Blacklist</summary>
+      <description>Legacy key for hiding items. Use hidden-entries instead.</description>
     </key>
   </schema>
 </schemalist>

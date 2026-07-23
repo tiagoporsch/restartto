@@ -17,18 +17,50 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: extension.js:64
+#: extension.js:94
 msgid "Restart To..."
 msgstr ""
 
-#: prefs.js:13
+#: prefs.js:16
 msgid "General"
 msgstr ""
 
-#: prefs.js:19
-msgid "Blacklist"
+#: prefs.js:22
+msgid "Select Boot Entries to display"
 msgstr ""
 
-#: prefs.js:20
-msgid "Hide boot entries"
+#: prefs.js:23
+msgid "Toggle to Show/Hide. Drag to reorder. Click names to rename."
+msgstr ""
+
+#: prefs.js:29 prefs.js:37
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: prefs.js:38
+msgid ""
+"<b>J / K</b> : Move selected row down / up\n"
+"<b>Space / Enter</b> : Toggle visibility\n"
+"<b>R / E / F2</b> : Rename entry\n"
+"<b>Esc</b> : Cancel editing"
+msgstr ""
+
+#: prefs.js:48
+msgid "Understood"
+msgstr ""
+
+#: prefs.js:182
+msgid "Click to rename"
+msgstr ""
+
+#: prefs.js:215
+msgid "Save"
+msgstr ""
+
+#: prefs.js:222
+msgid "Cancel"
+msgstr ""
+
+#: prefs.js:235
+msgid "Revert to original name"
 msgstr ""
